@@ -1,0 +1,57 @@
+---
+import ProjectPreview from "@/components/blocks/ProjectPreview.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getProjects } from "@/utils/post";
+import site from "@/config/site";
+
+const projects = await getProjects();
+const years = [
+  ...new Set(projects.map((project) => project.data.createdAt.getFullYear())),
+];
+---
+
+<Layout
+  title={site.labels.projectsTitle}
+  description={`${site.labels.projectsDescription} — ${projects.length} projects.`}
+>
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-2xl p-8 duration-700 md:p-16"
+  >
+    <header class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight">
+        {site.labels.projectsTitle}
+      </h2>
+      <p class="text-sm font-light text-muted-foreground italic">
+        {site.labels.projectsDescription} — {projects.length} projects.
+      </p>
+    </header>
+
+    <div class="space-y-16">
+      {
+        years.map((year) => (
+          <section class="relative">
+            <h3 class="year text-4xl tracking-tighter text-foreground/40">
+              {year}
+            </h3>
+            <div class="space-y-8">
+              {projects
+                .filter(
+                  (project) => project.data.createdAt.getFullYear() === year,
+                )
+                .map((project) => (
+                  <ProjectPreview project={project} />
+                ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .year {
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke: thin;
+  }
+</style>

@@ -2,14 +2,14 @@
   {
     "name": "Technology",
     "slug": "technology",
-    "description": "Articles about web development and programming",
+    "description": "Articles about 0s and 1s in human language",
     "icon": "mdi:code-tags"
   },
   {
-    "name": "Design",
-    "slug": "design",
-    "description": "Thoughts on UI/UX and visual design",
-    "icon": "mdi:palette"
+    "name": "Fitness",
+    "slug": "fitness",
+    "description": "My journey in the gym and on the field",
+    "icon": "mdi:weight-lifter"
   },
   {
     "name": "Life",

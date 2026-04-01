@@ -1,5 +1,6 @@
 import { file, glob } from "astro/loaders";
-import { reference, z } from "astro:content";
+import { reference } from "astro:content";
+import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 
 function slug() {
@@ -36,13 +37,18 @@ const projects = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
+    createdAt: z.coerce.date(),
+    // updatedAt: z.coerce.date().optional(),
+
     description: z.string(),
     tech: z.array(z.string()),
-    links: z.object({
-      homepage: z.string().url().optional(),
-      github: z.string().url().optional(),
-      demo: z.string().url().optional(),
-    }).optional(),
+    links: z
+      .object({
+        homepage: z.string().url().optional(),
+        github: z.string().url().optional(),
+        demo: z.string().url().optional(),
+      })
+      .optional(),
     status: z
       .enum(["planning", "in-progress", "completed", "archived"])
       .default("completed"),
@@ -80,16 +86,6 @@ const tags = defineCollection({
   }),
 });
 
-const friends = defineCollection({
-  loader: file("./src/content/miscs/friends.json"),
-  schema: z.object({
-    name: z.string().max(64),
-    description: z.string().optional().describe("One line string"),
-    link: z.string().url(),
-    avatar: z.string(),
-  }),
-});
-
 const pages = defineCollection({
   loader: glob({
     pattern: "**/*.{md,mdx}",
@@ -106,6 +102,5 @@ export const collections = {
   projects,
   categories,
   tags,
-  friends,
   pages,
 };
