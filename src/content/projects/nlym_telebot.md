@@ -4,9 +4,9 @@ description: A Telegram bot designed to announce the weekly youth service roster
 tech:
   - Python
   - AWS
-status: completed
+status: archived
 createdAt: 2024-03-19
-# image: ~/assets/heros/telegram_bot_unsplash.jpg
+image: "/assets/heros/telegram_bot_unsplash.jpg"
 ---
 
 ## Chapter 1: It's About Drive

@@ -11,7 +11,7 @@ links:
   github: https://github.com/e-mny/astro_portfolio_2025
 status: completed
 createdAt: 2025-02-23
-# image: ~/assets/heros/portfolio_website_v2.png
+image: "/assets/heros/portfolio_website_v2.png"
 ---
 
 ## Chapter 1: Done Is Better Than Perfect

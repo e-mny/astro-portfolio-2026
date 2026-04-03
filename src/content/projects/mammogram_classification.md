@@ -7,7 +7,7 @@ tech:
   - Keras
 status: completed
 createdAt: 2023-01-15
-# image: ~/assets/heros/pwa_intro.png
+image: "/assets/heros/pwa_intro.png"
 ---
 
 ## Chapter 1: The Beginning – Why This Project?

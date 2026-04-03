@@ -9,7 +9,7 @@ links:
   github: https://github.com/e-mny/HDB_Transport_Infrastructure_Review
 status: completed
 createdAt: 2024-07-15
-# image: ~/assets/heros/hdb_unsplash.jpg
+image: "/assets/heros/hdb_unsplash.jpg"
 ---
 
 ## Understanding Transport Disparities in HDB Towns

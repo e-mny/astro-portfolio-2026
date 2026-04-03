@@ -13,7 +13,7 @@ links:
   github: https://github.com/e-mny/astro_portfolio
 status: archived
 createdAt: 2024-09-04
-# image: assets/heros/portfolio_website_v1.png
+image: "/assets/heros/portfolio_website_v1.png"
 ---
 
 ## Chapter 1: The Beginning

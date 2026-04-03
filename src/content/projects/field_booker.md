@@ -7,7 +7,7 @@ links:
   github: https://github.com/e-mny/field_booker
 status: archived
 createdAt: 2023-01-13
-# image: ~/assets/heros/field_unsplash.jpg
+image: "/assets/heros/field_unsplash.jpg"
 ---
 
 ## Chapter 1: Why This Project?
