@@ -7,7 +7,7 @@ tech:
   - Python
   - Keras
   - OpenCV
-status: completed
+status: in-progress
 createdAt: 2023-01-15
 # image: ~/assets/heros/pwa_intro.png
 ---

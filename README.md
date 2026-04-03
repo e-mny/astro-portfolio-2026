@@ -41,17 +41,17 @@ pnpm build
 
 All site configuration is in `src/config/site.ts`. This is the only file you need to edit to personalize the theme.
 
-| Section | Description |
-|---------|-------------|
-| `meta` | Site title, description, author, logo, language |
-| `navigation` | Navigation menu items with subtitle labels |
-| `social` | Social links (GitHub, Email, etc.) |
-| `hero` | Homepage greeting, description, info cards |
-| `footer` | Copyright and credit text |
-| `comments` | Artalk comments configuration |
-| `features` | Toggle search, RSS |
-| `tools` | Tools/Stack page data |
-| `labels` | All UI text labels (for i18n) |
+| Section      | Description                                     |
+| ------------ | ----------------------------------------------- |
+| `meta`       | Site title, description, author, logo, language |
+| `navigation` | Navigation menu items with subtitle labels      |
+| `social`     | Social links (GitHub, Email, etc.)              |
+| `hero`       | Homepage greeting, description, info cards      |
+| `footer`     | Copyright and credit text                       |
+| `comments`   | Artalk comments configuration                   |
+| `features`   | Toggle search, RSS                              |
+| `tools`      | Tools/Stack page data                           |
+| `labels`     | All UI text labels (for i18n)                   |
 
 Also update `astro.config.mjs` to set your `site` URL.
 
@@ -82,10 +82,6 @@ Add to `src/content/projects/` with frontmatter: `title`, `description`, `tech`,
 ### Categories & Tags
 
 Edit `src/content/miscs/categories.json` and `src/content/miscs/tags.json`.
-
-### Friends
-
-Edit `src/content/miscs/friends.json` with `name`, `description`, `link`, `avatar`.
 
 ## Theme Colors
 

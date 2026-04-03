@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+const { card, index } = Astro.props;
+---
+
+<div
+  class="group relative flex gap-4 overflow-hidden rounded-2xl border border-border/50 bg-muted/30 p-5 align-middle"
+  style={`animation-delay: ${index * 100}ms`}
+>
+  {/* Background image */}
+  {
+    card.image && (
+      <Image
+        src={card.image.url}
+        alt={card.label}
+        height={card.image.height}
+        width={card.image.width}
+        class="absolute inset-0 h-full w-full object-cover opacity-80"
+      />
+    )
+  }
+
+  {/* Overlay: visible by default, fades out on hover */}
+  <div class="absolute inset-0 bg-muted/60 opacity-100 backdrop-blur-[2px]">
+  </div>
+
+  {/* Content */}
+  <div class="relative flex gap-4">
+    <div
+      class="text-lg text-primary transition-transform duration-300 group-hover:scale-110"
+    >
+      <Icon name={card.icon} />
+    </div>
+
+    <div class="flex flex-col">
+      <span
+        class="text-[10px] font-extrabold tracking-widest text-muted-foreground uppercase"
+      >
+        {card.label}
+      </span>
+      <span class="text-sm text-foreground/80">
+        {
+          card.value.split("|").map((line: string, i: number) => (
+            <>
+              {line.trim()}
+              {i < card.value.split("|").length - 1 && <br />}
+            </>
+          ))
+        }
+      </span>
+    </div>
+  </div>
+</div>

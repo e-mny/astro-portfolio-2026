@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+import {
+  getStravaCard,
+  getMonkeytypeCard,
+  getSpotifyCard,
+  getUltiscoreCard,
+} from "@/utils/get-dynamic-cards";
+import Card from "./Card.astro";
+import type { HeroCard } from "@/types";
+
+let dynamicCards: HeroCard[] = [];
+
+try {
+  const cardsFromApi = await Promise.all([
+    getStravaCard(),
+    getMonkeytypeCard(),
+    getSpotifyCard(),
+    getUltiscoreCard(),
+  ]);
+
+  dynamicCards = cardsFromApi.filter((x): x is NonNullable<typeof x> =>
+    Boolean(x),
+  );
+} catch (e) {
+  console.error("Failed to fetch dynamic cards", e);
+}
+
+// console.log(dynamicCards)
+---
+
+{
+  dynamicCards.length > 0 &&
+    dynamicCards.map((card, i) => <Card card={card} index={i} />)
+}

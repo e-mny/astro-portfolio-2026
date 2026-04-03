@@ -1,13 +1,11 @@
 ---
 title: Field Booker
-description:
-  An automated solution for booking sports fields using Python and Selenium,
-  designed to save time and reduce frustration.
+description: An automated solution for booking sports fields using Python and Selenium, designed to save time and reduce frustration.
 tech:
   - Python
 links:
   github: https://github.com/e-mny/field_booker
-status: completed
+status: archived
 createdAt: 2023-01-13
 # image: ~/assets/heros/field_unsplash.jpg
 ---

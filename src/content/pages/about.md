@@ -5,13 +5,14 @@ description: About this site and its author
 
 ## About Me
 
-Hello! I'm a developer who loves building things for the web.
+Hello! I'm a data scientist who also does web development.
 
-I created this site using [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com), and I'm sharing it as a theme called **Breeze** so others can use it too.
+Three words to describe me: Ambivert, Nerd, Dark
 
 ## Tech Stack
 
-- Astro + Tailwind CSS
+- [Astro](https://astro.build) - Inspired from [**Breeze**](https://github.com/linftyz/astro-theme-breeze).
+- [Tailwind CSS](https://tailwindcss.com)
 - TypeScript
 - Markdown / MDX
 

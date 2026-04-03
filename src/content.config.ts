@@ -38,15 +38,15 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     createdAt: z.coerce.date(),
-    // updatedAt: z.coerce.date().optional(),
-
+    updatedAt: z.coerce.date().optional(),
     description: z.string(),
     tech: z.array(z.string()),
+    tags: z.array(z.string()).optional(), // optional, will be derived
     links: z
       .object({
-        homepage: z.string().url().optional(),
-        github: z.string().url().optional(),
-        demo: z.string().url().optional(),
+        homepage: z.url().optional(),
+        github: z.url().optional(),
+        demo: z.url().optional(),
       })
       .optional(),
     status: z

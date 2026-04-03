@@ -7,7 +7,7 @@ tech:
   - Supabase
 status: completed
 createdAt: 2025-02-11
-# image: ~/assets/projects/fitlah_bot_1.jpg
+image: "/assets/projects/fitlah_bot_1.jpg"
 ---
 
 ## Chapter 1: The Why?
@@ -30,9 +30,8 @@ Before building the bot, I had to understand how to access public facility data 
 
 ## Chapter 3: The What?
 
-<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot">
+<video autoplay loop muted playsinline class="w-full h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot">
   <source src="/projects/fitlah_bot_start.webm" type="video/webm">
-  <source src="/projects/fitlah_bot_start.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -59,7 +58,7 @@ The periods of 30 seconds wait always made me anxious &ndash; will my fix finall
 
 ## Chapter 5: The Yay!
 
-<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none z-50" aria-label="Demo of FitLah bot adding user's favourites">
+<video autoplay loop muted playsinline class="w-full h-auto text-white pointer-events-none cursor-none z-50" aria-label="Demo of FitLah bot adding user's favourites">
   <source src="/projects/fitlah_bot_addfav.webm" type="video/webm">
   <source src="/projects/fitlah_bot_addfav.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -74,7 +73,7 @@ After countless iterations and debugging sessions, things started falling into p
 
 ## Chapter 6: The Now!
 
-<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot showing user's favourites">
+<video autoplay loop muted playsinline class="w-full h-auto text-white pointer-events-none cursor-none" aria-label="Demo of FitLah bot showing user's favourites">
   <source src="/projects/fitlah_bot_showfav.webm" type="video/webm">
   <source src="/projects/fitlah_bot_showfav.mp4" type="video/mp4">
   Your browser does not support the video tag.

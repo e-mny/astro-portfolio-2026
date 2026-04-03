@@ -1,7 +1,7 @@
 ---
 import site from "@/config/site";
 import Nav from "./Nav.astro";
-import ThemeToggle from "./ThemeToggle.astro";
+import { Toggle } from "astro-theme-toggle/components";
 import { Icon } from "astro-icon/components";
 import Brand from "./Brand.astro";
 import SearchModal from "../blocks/SearchModal.astro";
@@ -14,7 +14,7 @@ import SearchBox from "./SearchBox.astro";
 >
   <Brand />
 
-  <div class="flex items-center justify-between">
+  <div class="flex w-full items-center justify-between">
     <div class="flex gap-4 text-muted-foreground/60">
       {
         site.social.map((item) => (
@@ -28,8 +28,10 @@ import SearchBox from "./SearchBox.astro";
         ))
       }
     </div>
-
-    <ThemeToggle />
+    <Toggle
+      style="width: 24px; height: 24px;"
+      class="justify-end text-muted-foreground/60 hover:text-primary"
+    />
   </div>
 
   <SearchBox />

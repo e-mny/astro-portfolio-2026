@@ -1,8 +1,6 @@
 ---
 title: HDB Transport Infrastructure Review
-description:
-  A review of public transport infrastructure in HDB towns, assessing disparities
-  and recommending improvements.
+description: A review of public transport infrastructure in HDB towns, assessing disparities and recommending improvements.
 tech:
   - Python
   - Seaborn

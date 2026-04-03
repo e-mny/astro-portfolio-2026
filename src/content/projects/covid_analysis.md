@@ -12,7 +12,7 @@ links:
   github: https://github.com/e-mny/covid_analysis
 status: completed
 createdAt: 2022-12-05
-# image: ~/assets/heros/covid_unsplash.jpg
+image: "/assets/heros/covid_unsplash.jpg"
 ---
 
 ## Chapter 1: Why This Project?

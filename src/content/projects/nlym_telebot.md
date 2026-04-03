@@ -1,8 +1,6 @@
 ---
 title: Youth Service Telegram Bot
-description:
-  A Telegram bot designed to announce the weekly youth service roster and
-  facilitate prayer requests for the church community.
+description: A Telegram bot designed to announce the weekly youth service roster and facilitate prayer requests for the church community.
 tech:
   - Python
   - AWS

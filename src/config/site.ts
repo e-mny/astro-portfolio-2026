@@ -17,7 +17,6 @@ const site = {
     { name: "Home", subtitle: "Index", href: "/" },
     { name: "Writing", subtitle: "Blog", href: "/posts" },
     { name: "Projects", subtitle: "Works", href: "/projects" },
-    // { name: "Friends", subtitle: "Links", href: "/friends" },
     { name: "About", subtitle: "Me", href: "/about" },
   ],
 
@@ -42,21 +41,10 @@ const site = {
     greeting: "👋 Hey, I'm Enoch!",
     // Supports HTML. Use <span class="font-medium text-foreground underline decoration-primary/30"> to highlight keywords
     description:
-      'A minimal personal website theme built with <span class="font-medium text-foreground underline decoration-primary/30">Astro</span> and <span class="font-medium text-foreground underline decoration-primary/30">Tailwind CSS</span>.',
+      "I turn caffeine into predictive models, data insights, and web apps.",
     cards: [
       { icon: "mdi:explore", label: "Status", value: "Probably researching" },
       { icon: "mdi:location", label: "Location", value: "Singapore" },
-    ],
-
-    dynamicCards: [
-      { icon: "mdi:run", label: "Strava", value: "Running: 100 km this month" },
-      { icon: "mdi:keyboard", label: "Monkeytype", value: "WPM: 80" },
-      { icon: "mdi:disc", label: "Frisbee", value: "Games Played: 5" },
-      {
-        icon: "mdi:spotify",
-        label: "Spotify",
-        value: "Listening: Chill Beats",
-      },
     ],
   },
 
@@ -80,7 +68,15 @@ const site = {
     search: true,
     rss: false,
     // Auto-mark posts as "new" if published within this many days (0 to disable)
-    newPostDays: 7,
+    newPostDays: 14,
+  },
+
+  // --- Status Colours ---
+  statusStyles: {
+    planning: "bg-yellow-100 text-yellow-800 border-yellow-200",
+    "in-progress": "bg-blue-100 text-blue-800 border-blue-200",
+    completed: "bg-green-100 text-green-800 border-green-200",
+    archived: "bg-gray-100 text-gray-800 border-gray-200",
   },
 
   // --- Tools Page Data ---
@@ -93,39 +89,18 @@ const site = {
           link: "https://code.visualstudio.com",
           icon: "mdi:microsoft-visual-studio-code",
         },
-        {
-          name: "WebStorm",
-          link: "https://www.jetbrains.com/webstorm",
-          icon: "mdi:code-braces",
-        },
         { name: "Terminal", icon: "mdi:terminal" },
         { name: "Git", link: "https://git-scm.com", icon: "mdi:git" },
         { name: "Docker", link: "https://www.docker.com", icon: "mdi:docker" },
-        { name: "Postman", link: "https://www.postman.com", icon: "mdi:api" },
-      ],
-    },
-    {
-      name: "design",
-      items: [
         {
-          name: "Figma",
-          link: "https://www.figma.com",
-          icon: "mdi:vector-polygon",
+          name: "Cloudflare",
+          link: "https://www.cloudflare.com",
+          icon: "mdi:cloud-upload",
         },
         {
-          name: "Sketch",
-          link: "https://www.sketch.com",
-          icon: "mdi:vector-square",
-        },
-        {
-          name: "Adobe XD",
-          link: "https://www.adobe.com/products/xd.html",
-          icon: "mdi:pencil-ruler",
-        },
-        {
-          name: "Photoshop",
-          link: "https://www.adobe.com/products/photoshop.html",
-          icon: "mdi:image-edit",
+          name: "Vercel",
+          link: "https://www.vercel.app",
+          icon: "mdi:arrow-top-drop-circle",
         },
       ],
     },
@@ -143,7 +118,7 @@ const site = {
           link: "https://www.raycast.com",
           icon: "mdi:lightning-bolt",
         },
-        { name: "Arc Browser", link: "https://arc.net", icon: "mdi:web" },
+        { name: "Firefox", link: "https://firefox.com", icon: "mdi:firefox" },
       ],
     },
   ],
@@ -152,14 +127,14 @@ const site = {
   // Customize these values to change the text displayed on pages
   labels: {
     postsTitle: "Writing",
-    postsDescription: "Notes, thoughts, and technical musings",
+    postsDescription: "Unhinged thoughts go here.",
     projectsTitle: "Projects",
     projectsDescription: "Small tools built for fun or to solve real problems.",
     friendsTitle: "Friends",
     friendsDescription: "Like-minded folks around the web.",
-    toolsTitle: "Stack",
+    toolsTitle: "My weapons",
     aboutTitle: "About",
-    aboutDescription: "About this site and its author",
+    aboutDescription: "About this site and author",
     backToPosts: "Back to posts",
     goHome: "Go Home",
     notFoundTitle: "Page not found",
@@ -167,7 +142,7 @@ const site = {
       "The page you're looking for may have been removed or the link is broken.",
     endOfPost: "End of Post",
     tableOfContents: "Table of Contents",
-    searchPlaceholder: "Search posts, tags, or commands...",
+    searchPlaceholder: "Search anything!",
     searchNavigate: "Navigate",
     commentSuccess: "Comment submitted",
   },

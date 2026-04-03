@@ -3,6 +3,7 @@ import site from "@/config/site";
 import type { HeadProps } from "@/types";
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
+import { ThemeScript } from "astro-theme-toggle/components";
 
 type Props = HeadProps;
 
@@ -79,4 +80,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <!-- View Transtions -->
   <ClientRouter />
+
+  <!-- Theme Toggle -->
+  <ThemeScript />
 </head>

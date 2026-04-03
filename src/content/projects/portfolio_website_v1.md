@@ -11,7 +11,7 @@ tech:
   - HTML
 links:
   github: https://github.com/e-mny/astro_portfolio
-status: completed
+status: archived
 createdAt: 2024-09-04
 # image: assets/heros/portfolio_website_v1.png
 ---
@@ -76,7 +76,7 @@ I also liked Apple's main page, something about it makes the design just so clea
 
 ![Screenshot from Apple's Website](../../assets/projects/portfolio_website_v1_4.png "Source: Apple")
 
-<video autoplay loop muted playsinline class="w-5/6 h-auto text-white pointer-events-none cursor-none" aria-label="Demo of Portfolio Website v1">
+<video autoplay loop muted playsinline class="w-full h-auto text-white pointer-events-none cursor-none" aria-label="Demo of Portfolio Website v1">
 
   <source src="/projects/portfolio_website_v1.webm" type="video/webm">
   <source src="/projects/portfolio_website_v1.mp4" type="video/mp4">

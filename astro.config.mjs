@@ -11,8 +11,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   // IMPORTANT: Change this to your deployed site URL
   site: "https://enochmok.vercel.app/",
+  output: "static",
 
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
 

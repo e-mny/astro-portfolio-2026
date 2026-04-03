@@ -27,7 +27,6 @@ export const getProjects = async () => {
     const statusDiff =
       (statusOrder[a.data.status] ?? 4) - (statusOrder[b.data.status] ?? 4);
     if (statusDiff !== 0) return statusDiff;
-    console.log(statusDiff);
     return 0;
   });
 };
