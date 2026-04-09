@@ -6,12 +6,19 @@ import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   // IMPORTANT: Change this to your deployed site URL
   site: "https://enochmok.vercel.app/",
   output: "static",
+
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 
   vite: {
     // @ts-ignore

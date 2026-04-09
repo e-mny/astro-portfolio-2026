@@ -18,6 +18,12 @@
     "icon": "mdi:coffee"
   },
   {
+    "name": "Food",
+    "slug": "food",
+    "description": "Finding the yumyums for my tumtum",
+    "icon": "mdi:noodles"
+  },
+  {
     "name": "Uncategorized",
     "slug": "uncategorized",
     "icon": "mdi:folder"

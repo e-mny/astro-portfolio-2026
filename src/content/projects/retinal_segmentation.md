@@ -9,7 +9,8 @@ tech:
   - OpenCV
 status: in-progress
 createdAt: 2023-01-15
-image: "/assets/heros/pwa_intro.png"
+image: "/projects/pwa_intro.png"
+draft: true
 ---
 
 ## Chapter 1: The Beginning – Why This Project?

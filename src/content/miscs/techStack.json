@@ -1,0 +1,95 @@
+[
+  { "text": "Python", "logo": "simple-icons:python", "hoverColor": "#4584b6" },
+  {
+    "text": "PyTorch",
+    "logo": "simple-icons:pytorch",
+    "hoverColor": "#EE4C2C"
+  },
+  {
+    "text": "TensorFlow",
+    "logo": "simple-icons:tensorflow",
+    "hoverColor": "#FF6F00"
+  },
+  {
+    "text": "scikit-learn",
+    "logo": "simple-icons:scikitlearn",
+    "hoverColor": "#F7931E"
+  },
+  { "text": "Pandas", "logo": "simple-icons:pandas", "hoverColor": "#150458" },
+  { "text": "NumPy", "logo": "simple-icons:numpy", "hoverColor": "#77B900" },
+  { "text": "Kaggle", "logo": "simple-icons:kaggle", "hoverColor": "#20BEFF" },
+  { "text": "Matplotlib", "logo": "", "hoverColor": "#11557c" },
+  { "text": "Seaborn", "logo": "", "hoverColor": "#6e90b2" },
+  { "text": "OpenCV", "logo": "simple-icons:opencv", "hoverColor": "#5C3C6F" },
+
+  { "text": "HTML", "logo": "mdi:language-html5", "hoverColor": "#E34F26" },
+  {
+    "text": "JavaScript",
+    "logo": "mdi:language-javascript",
+    "hoverColor": "#C0AF3F"
+  },
+  {
+    "text": "TypeScript",
+    "logo": "simple-icons:typescript",
+    "hoverColor": "#3178C6"
+  },
+  { "text": "CSS", "logo": "mdi:language-css3", "hoverColor": "#1572B6" },
+  { "text": "Node.js", "logo": "mdi:nodejs", "hoverColor": "#339933" },
+  { "text": "Tailwind CSS", "logo": "mdi:tailwind", "hoverColor": "#38B2AC" },
+  { "text": "Astro", "logo": "simple-icons:astro", "hoverColor": "#FF5D01" },
+  { "text": "React", "logo": "simple-icons:react", "hoverColor": "#61DAFB" },
+  {
+    "text": "Next.js",
+    "logo": "simple-icons:nextdotjs",
+    "hoverColor": "#000000"
+  },
+  { "text": "Svelte", "logo": "simple-icons:svelte", "hoverColor": "#FF3E00" },
+  {
+    "text": "Express.js",
+    "logo": "simple-icons:express",
+    "hoverColor": "#000"
+  },
+  { "text": "Go", "logo": "mdi:language-go", "hoverColor": "#00ADD8" },
+  {
+    "text": "Electron.js",
+    "logo": "simple-icons:electron",
+    "hoverColor": "#47848F"
+  },
+
+  {
+    "text": "PostgreSQL",
+    "logo": "simple-icons:postgresql",
+    "hoverColor": "#336791"
+  },
+  { "text": "SQLite", "logo": "simple-icons:sqlite", "hoverColor": "#003B57" },
+  { "text": "PouchDB", "logo": "", "hoverColor": "#6ccb99" },
+  {
+    "text": "Supabase",
+    "logo": "simple-icons:supabase",
+    "hoverColor": "#3FCF8E"
+  },
+
+  { "text": "Git", "logo": "mdi:git", "hoverColor": "#F34F29" },
+  { "text": "Docker", "logo": "mdi:docker", "hoverColor": "#2496ED" },
+  {
+    "text": "Jupyter",
+    "logo": "simple-icons:jupyter",
+    "hoverColor": "#F37626"
+  },
+  {
+    "text": "Markdown",
+    "logo": "simple-icons:markdown",
+    "hoverColor": "#ffffff"
+  },
+
+  { "text": "Windows", "logo": "mdi:windows", "hoverColor": "#0078D6" },
+  { "text": "macOS", "logo": "simple-icons:apple", "hoverColor": "#A2AAAD" },
+  { "text": "Linux", "logo": "mdi:linux", "hoverColor": "#000000" },
+
+  {
+    "text": "Google Cloud",
+    "logo": "simple-icons:googlecloud",
+    "hoverColor": "#4285F4"
+  },
+  { "text": "AWS", "logo": "", "hoverColor": "#FF9900" }
+]

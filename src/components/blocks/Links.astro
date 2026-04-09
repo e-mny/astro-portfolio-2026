@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { project } = Astro.props;
+---
+
+{
+  project.data.links && (
+    <div class="flex gap-2 font-mono text-[12px] tracking-tight">
+      {project.data.links.website && (
+        <a
+          href={project.data.links.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-foreground/70 hover:border-primary/40 hover:text-primary"
+        >
+          <Icon name="mdi:web" class="h-3 w-3" />
+          Website
+        </a>
+      )}
+      {project.data.links.github && (
+        <a
+          href={project.data.links.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-foreground/70 hover:border-primary/40 hover:text-primary"
+        >
+          <Icon name="mdi:github" class="h-3 w-3" />
+          Source
+        </a>
+      )}
+      {project.data.links.demo && (
+        <a
+          href={project.data.links.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-foreground/70 hover:border-primary/40 hover:text-primary"
+        >
+          <Icon name="mdi:open-in-new" class="h-3 w-3" />
+          Demo
+        </a>
+      )}
+      {project.data.links.publication && (
+        <a
+          href={project.data.links.publication}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-foreground/70 hover:border-primary/40 hover:text-primary"
+        >
+          <Icon name="mdi:book-open" class="h-3 w-3" />
+          Publication
+        </a>
+      )}
+    </div>
+  )
+}

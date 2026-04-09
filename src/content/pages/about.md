@@ -5,9 +5,11 @@ description: About this site and its author
 
 ## About Me
 
-Hello! I'm a data scientist who also does web development.
+Hello! I'm a data scientist that does development work too!
 
-Three words to describe me: Ambivert, Nerd, Dark
+- I like to run <span class="text-background" onclick="this.classList.remove('text-background')">away from my problems</span> 🏃‍♂️
+- I play the acoustic and bass guitar <span class="text-background" onclick="this.classList.remove('text-background')">not with feelings</span> 🎸
+-
 
 ## Tech Stack
 
@@ -18,9 +20,11 @@ Three words to describe me: Ambivert, Nerd, Dark
 
 ## What I Write About
 
-- Web development tips and tutorials
-- Tools and workflows I find useful
-- Thoughts on technology and design
+- [The foodie side of me](/categories/food)
+- [Me being a coffee connoisseur](/categories/coffee)
+- [Me trying to be fit](/categories/fitness)
+- [The computer geek in me](/categories/technology)
+-
 
 ## Contact
 

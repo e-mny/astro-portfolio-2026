@@ -1,35 +1,46 @@
 ---
-title: Portfolio Website v2
-description: V2 of my portfolio website. I probably learnt my lessons, right?
+title: Astro Portfolio Website v2
+description: V2 of my portfolio website, made using Astro.
 tech:
   - Astro
   - JavaScript
   - Markdown
   - CSS
   - HTML
+tags:
+  - Web Development
 links:
   github: https://github.com/e-mny/astro_portfolio_2025
 status: completed
-createdAt: 2025-02-23
-image: "/assets/heros/portfolio_website_v2.png"
+createdAt: 2025-02-06
+updatedAt: 2025-03-13
+image: "/projects/portfolio_website_v2.png"
 ---
 
-## Chapter 1: Done Is Better Than Perfect
+## What it is
 
-![List of Features I wanted in my website](../../assets/projects/portfolio_website_v2_1.png "List of features I wanted in my website")
+![Screenshot of the another portfolio website I made](/projects/portfolio_website_v2.png)
 
-By writing down everything that I wanted to implement on my website, I feel alot more relieved. I categorized the features I want for my MVP, and those that are for aesthetics and are optional.
+<figcaption>I always felt like there was something I can improve on in my websites</figcaption>
 
-Once all my MVP features are implemented, I will include it in my LinkedIn and resume, and when I feel like it, I'll work on the remaining optional features.
+A personal portfolio website focused on core functionality with optional aesthetic enhancements planned for later.
 
----
+## Why I made it
 
-## Chapter 2: The Result
+![My to-do list for all the features I wanted](/projects/portfolio_website_v2_1.png)
 
-Well, when you see this, the website is ready to be SERVED (excluding the optional features).
+<figcaption>My ambitious list for all the features I wanted</figcaption>
 
-I want to try other frameworks to build websites or business landing sites in the future.
+I wanted a working MVP portfolio that I could showcase without getting stuck chasing perfection.
 
-Heard good things about Hugo for its fast build speeds so I really want to give that a try.
+## What it does
 
-Drop me an email to build websites for you!
+- Implements essential features for a fully functional portfolio website
+- Categorizes optional aesthetic features for future enhancement
+- Ready to be shared on LinkedIn and resumes
+
+## Notes
+
+- Prioritizing MVP features helped reduce decision paralysis and accelerate deployment
+- Optional enhancements remain for future iterations
+- Future experimentation with other frameworks (e.g., Hugo) is planned for learning and performance comparison

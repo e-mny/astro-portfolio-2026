@@ -14,9 +14,9 @@ let dynamicCards: HeroCard[] = [];
 try {
   const cardsFromApi = await Promise.all([
     getStravaCard(),
-    getMonkeytypeCard(),
+    // getMonkeytypeCard(),
     getSpotifyCard(),
-    getUltiscoreCard(),
+    // getUltiscoreCard(),
   ]);
 
   dynamicCards = cardsFromApi.filter((x): x is NonNullable<typeof x> =>

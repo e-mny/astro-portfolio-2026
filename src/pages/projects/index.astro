@@ -4,6 +4,8 @@ import { Image } from "astro:assets";
 import site from "@/config/site";
 import { Icon } from "astro-icon/components";
 import { getProjects } from "@/utils/post";
+import tagsList from "@/content/miscs/tags.json";
+import Links from "@/components/blocks/Links.astro";
 
 const projects = await getProjects();
 ---
@@ -24,7 +26,7 @@ const projects = await getProjects();
       </p>
     </header>
 
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div class="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2">
       {
         projects.length === 0 ? (
           <div class="col-span-full py-12 text-center">
@@ -53,60 +55,39 @@ const projects = await getProjects();
                   {project.data.status}
                 </span>
               </div>
-              <a href={`/projects/${project.id}`}>
-                <h3 class="mb-2 text-base font-bold">{project.data.title}</h3>
+              <a
+                href={`/projects/${project.id}`}
+                class="mb-2 line-clamp-2 min-h-12"
+              >
+                <h3 class="text-base font-bold">{project.data.title}</h3>
               </a>
-              <div class="flex flex-col">
-                <p class="line-clamp-2 overflow-x-hidden pb-4 text-xs leading-relaxed text-muted-foreground">
+              <div class="flex flex-1 flex-col">
+                <p class="pb-4 text-xs leading-relaxed text-muted-foreground">
                   {project.data.description}
                 </p>
               </div>
               <div class="mb-3 flex flex-wrap gap-2">
-                {project.data.tech.map((t) => (
-                  <a href={`/tags/${t}`.toLowerCase().replace(" ", "")}>
-                    <span class="font-mono text-[10px] text-primary/50">
-                      #{t}
-                    </span>
-                  </a>
-                ))}
+                {[
+                  ...new Set([
+                    ...project.data.tags.map((t) => t.id),
+                    ...project.data.tech,
+                  ]),
+                ].map((id) => {
+                  const tag = tagsList.find(
+                    (tag) => tag.name.toLowerCase() === id.toLowerCase(),
+                  );
+                  if (!tag) return null;
+
+                  return (
+                    <a href={`/tags/${tag?.slug}`}>
+                      <span class="font-mono text-[10px] text-primary/50">
+                        #{tag?.name}
+                      </span>
+                    </a>
+                  );
+                })}
               </div>
-              {project.data.links && (
-                <div class="flex gap-2">
-                  {project.data.links.homepage && (
-                    <a
-                      href={project.data.links.homepage}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-[11px] font-medium text-foreground/70 hover:border-primary/40 hover:text-primary"
-                    >
-                      <Icon name="mdi:web" class="h-3 w-3" />
-                      Website
-                    </a>
-                  )}
-                  {project.data.links.github && (
-                    <a
-                      href={project.data.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-[11px] font-medium text-foreground/70 hover:border-primary/40 hover:text-primary"
-                    >
-                      <Icon name="mdi:github" class="h-3 w-3" />
-                      Source
-                    </a>
-                  )}
-                  {project.data.links.demo && (
-                    <a
-                      href={project.data.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-1 rounded-lg border border-border/50 bg-muted/30 px-3 py-2 text-[11px] font-medium text-foreground/70 hover:border-primary/40 hover:text-primary"
-                    >
-                      <Icon name="mdi:open-in-new" class="h-3 w-3" />
-                      Demo
-                    </a>
-                  )}
-                </div>
-              )}
+              <Links project={project} class="mt-auto" />
             </div>
           ))
         )

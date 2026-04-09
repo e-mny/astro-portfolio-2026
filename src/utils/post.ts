@@ -13,7 +13,9 @@ export const getPosts = async () => {
 };
 
 export const getProjects = async () => {
-  const projects = await getCollection("projects");
+  const projects = await getCollection("projects", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
 
   const statusOrder = {
     "in-progress": 0,

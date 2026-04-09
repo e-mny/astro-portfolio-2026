@@ -1,0 +1,27 @@
+---
+title: "Reflection - Feburary 2025"
+createdAt: 2025-02-25
+category: "life"
+---
+
+_Caveat: Really have no idea how this section is going to play out but I think of it as a place for myself to track my progress and see what I've been working on._
+
+---
+
+Recently started as a Data Analyst in the Finance department of SingHealth. Apart from it being a little far from where I stay, people there are really nice and caring, including my bosses. Work is G.
+
+--
+
+I sprained my ankle last week. X-rays showed no fractures. Several specialist appointments and MRIs have been scheduled in the coming weeks.
+
+So hopefully nothing major so that I can get back to playing frisbee again. In the meantime, I've been doing some light stretching of the calf and also a little bit of ankle rotations and ABCs to gain some ankle mobility.
+
+![Picture of my Ankle Sprain in Feb 2025](/photos/ankle_sprain_feb2025.JPG)
+
+<figcaption>Womp Womp</figcaption>
+
+--
+
+And yeah... during the past couple of weeks, I've been working on my portfolio website website. Pretty fulfilling to see it coming together, but NGL, after seeing it come together, the perfectionist in me just don't find it good enough. I just want to tear it all down and re-do it all over again HAHA
+
+Regardless, I'm just going to leave it as it is for now. Perhaps when I gain more inspiration or learn how to make beautifully designed websites, I'll redesign this website and make a v2 of it.

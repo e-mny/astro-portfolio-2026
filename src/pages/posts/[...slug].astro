@@ -77,13 +77,17 @@ const tags = (await getEntries(post.data.tags)).filter((value) => value);
             >
           </div>
           <span class="h-3 w-px bg-border"></span>
-          <a
-            href={`/categories/${category.data.slug}`}
-            class="flex cursor-pointer items-center gap-1.5 transition-colors hover:text-primary"
-          >
-            <Icon name={"mdi:category-outline"} />
-            <span>{category.data.name}</span>
-          </a>
+          {
+            category && (
+              <a
+                href={`/categories/${category.data.slug}`}
+                class="flex cursor-pointer items-center gap-1.5 transition-colors hover:text-primary"
+              >
+                <Icon name={"mdi:category-outline"} />
+                <span>{category.data.name}</span>
+              </a>
+            )
+          }
         </div>
 
         <div

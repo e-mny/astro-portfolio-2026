@@ -13,7 +13,7 @@ function slug() {
 
 const posts = defineCollection({
   loader: glob({
-    pattern: "**/*.{md,mdx}",
+    pattern: ["**/*.{md,mdx}", "!**/_*.{md,mdx}"],
     base: "./src/content/posts",
   }),
   schema: ({ image }) =>
@@ -21,7 +21,10 @@ const posts = defineCollection({
       title: z.string().max(128),
       createdAt: z.coerce.date(),
       updatedAt: z.coerce.date().optional(),
-      category: reference("categories"),
+      category: reference("categories").optional().default({
+        collection: "categories",
+        id: "uncategorized",
+      }),
       tags: z.array(reference("tags")).optional().default([]),
       summary: z.string().optional().default(""),
       cover: image().optional(),
@@ -32,7 +35,7 @@ const posts = defineCollection({
 
 const projects = defineCollection({
   loader: glob({
-    pattern: "**/*.{md,mdx}",
+    pattern: ["**/*.{md,mdx}", "!**/_*.{md,mdx}"],
     base: "./src/content/projects",
   }),
   schema: z.object({
@@ -41,18 +44,20 @@ const projects = defineCollection({
     updatedAt: z.coerce.date().optional(),
     description: z.string(),
     tech: z.array(z.string()),
-    tags: z.array(z.string()).optional(), // optional, will be derived
+    tags: z.array(reference("tags")).optional().default([]),
     links: z
       .object({
-        homepage: z.url().optional(),
+        website: z.url().optional(),
         github: z.url().optional(),
         demo: z.url().optional(),
+        publication: z.url().optional(),
       })
       .optional(),
     status: z
       .enum(["planning", "in-progress", "completed", "archived"])
       .default("completed"),
     image: z.string().optional(),
+    draft: z.boolean().default(false),
   }),
 });
 

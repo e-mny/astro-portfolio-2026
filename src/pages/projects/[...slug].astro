@@ -9,8 +9,9 @@ import { Icon } from "astro-icon/components";
 import Toast from "@/components/blocks/Toast.astro";
 import Comments from "@/components/blocks/Comments.astro";
 import TableOfContents from "@/components/blocks/TableOfContents.astro";
-import site from "@/config/site";
 import getReadingTime from "reading-time";
+import techStack from "@/content/miscs/techStack.json";
+import Links from "@/components/blocks/Links.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -18,7 +19,6 @@ export async function getStaticPaths() {
     // Convert markdown content to string
     const content = project.body || ""; // Astro collection project has `.body`
     const stats = getReadingTime(content); // compute reading time
-
     return {
       params: { slug: project.id },
       props: {
@@ -37,7 +37,18 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 
 const { Content, headings } = await render(project);
-const techStack = project.data.tech;
+const techStackData = project.data.tech
+  .map((name) =>
+    techStack.find(
+      (t: { text: string; logo: string; hoverColor: string }) =>
+        t.text.toLowerCase() === name.toLowerCase(),
+    ),
+  )
+  .filter(
+    (t): t is { text: string; logo: string; hoverColor: string } =>
+      t !== undefined,
+  )
+  .sort((a, b) => a.text.localeCompare(b.text));
 ---
 
 <Layout title={project.data.title} description={project.data.description}>
@@ -101,37 +112,50 @@ const techStack = project.data.tech;
           </div>
         </div>
       </div>
-    </header>
+      <div
+        class="animate-in fade-in mt-12 mb-8 flex flex-wrap gap-2 duration-1000"
+      >
+        {
+          techStackData.map((tech) => (
+            <span
+              class="group flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/30 px-3 py-1.5 transition-colors"
+              style={`--hover-color: ${tech?.hoverColor}`}
+            >
+              {/* Logo */}
+              {tech?.logo && (
+                <Icon
+                  name={tech?.logo}
+                  class="h-3.5 w-3.5 text-muted-foreground transition-colors group-hover:text-(--hover-color)"
+                />
+              )}
 
-    <TableOfContents headings={headings} />
-
-    <div
-      class:list={[
-        "prose max-w-none dark:prose-invert",
-        "prose-headings:tracking-tight",
-        "prose-p:mb-8 prose-p:leading-loose prose-p:font-normal prose-p:text-muted-foreground",
-        "prose-code:rounded-sm prose-code:bg-primary/15 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-primary prose-code:before:content-none prose-code:after:content-none",
-        "prose-",
-      ]}
-      data-pagefind-body
-    >
-      <Content components={{ a: Link, img: Img }} />
-    </div>
-
-    <div
-      class="animate-in fade-in mt-12 mb-8 flex flex-wrap gap-2 duration-1000"
-    >
-      {
-        techStack.map((tech) => (
-          <span class="group flex items-center gap-1.5 rounded-xl border border-border/50 bg-muted/30 px-3 py-1.5">
-            <span class="font-mono text-xs text-primary/40 italic">#</span>
-            <span class="text-xs font-medium text-muted-foreground">
-              {tech}
+              {/* Name */}
+              <span class="font-mono text-[12px] tracking-tight text-muted-foreground transition-colors group-hover:text-(--hover-color)">
+                {tech?.text}
+              </span>
             </span>
-          </span>
-        ))
-      }
-    </div>
+          ))
+        }
+      </div>
+
+      <TableOfContents headings={headings} />
+
+      <div
+        class:list={[
+          "prose max-w-none dark:prose-invert",
+          "prose-headings:tracking-tight",
+          "prose-p:mb-8 prose-p:leading-loose prose-p:font-normal prose-p:text-muted-foreground",
+          "prose-code:rounded-sm prose-code:bg-primary/15 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-primary prose-code:before:content-none prose-code:after:content-none",
+          "prose-",
+        ]}
+        data-pagefind-body
+      >
+        <Content components={{ a: Link, img: Img }} />
+
+        {project.data.links && <h2>Links</h2>}
+        <Links project={project} />
+      </div>
+    </header>
   </article>
 
   <footer class="mt-16 space-y-12 px-8 md:px-16">

@@ -1,9 +1,8 @@
 [
-  { "name": "Astro", "slug": "astro" },
-  { "name": "Tailwind CSS", "slug": "tailwindcss" },
+  { "name": "Web Development", "slug": "webdev" },
   { "name": "JavaScript", "slug": "javascript" },
-  { "name": "TypeScript", "slug": "typescript" },
-  { "name": "CSS", "slug": "css" },
-  { "name": "Markdown", "slug": "markdown" },
-  { "name": "Tutorial", "slug": "tutorial" }
+  { "name": "Python", "slug": "python" },
+  { "name": "Data Science", "slug": "datascience" },
+  { "name": "Tutorial", "slug": "tutorial" },
+  { "name": "Automation", "slug": "automation" }
 ]
