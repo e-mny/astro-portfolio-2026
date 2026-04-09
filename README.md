@@ -6,18 +6,18 @@ This theme was heavily inspired by [Breeze theme](https://github.com/linftyz/ast
 
 ## Features
 
-Project Showcase – Markdown-powered project pages with images, videos, and interactive demos.
-Responsive Design – Works on desktop, tablet, and mobile devices.
-Dark Mode Support – Automatically adapts to the user’s system theme.
-Interactive Elements – Status indicators, hover effects, and subtle animations for a modern feel.
-Easy Updates – Projects and content can be added via Markdown files.
+Project Showcase - Markdown-powered project pages with images, videos, and interactive demos.
+Responsive Design - Works on desktop, tablet, and mobile devices.
+Dark Mode Support - Automatically adapts to the user’s system theme.
+Interactive Elements - Status indicators, hover effects, and subtle animations for a modern feel.
+Easy Updates - Projects and content can be added via Markdown files.
 
 ## Tech Stack
 
-Astro – Static site generator for fast performance
-Tailwind CSS – Utility-first styling
-JavaScript / TypeScript – Interactive frontend components
-Markdown / MDX – Easy content creation for projects and posts
+Astro - Static site generator for fast performance
+Tailwind CSS - Utility-first styling
+JavaScript / TypeScript - Interactive frontend components
+Markdown / MDX - Easy content creation for projects and posts
 
 ## Usage
 
