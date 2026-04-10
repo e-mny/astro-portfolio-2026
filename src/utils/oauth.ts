@@ -64,5 +64,6 @@ export async function getValidAccessToken(
 
   // Token expired or not cached, refresh it
   const newTokens = await refreshToken(provider, oldRefreshToken);
+  console.log(newTokens);
   return newTokens?.access_token || null;
 }
