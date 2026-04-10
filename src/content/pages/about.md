@@ -9,7 +9,6 @@ Hello! I'm a data scientist that does development work too!
 
 - I like to run <span class="text-background" onclick="this.classList.remove('text-background')">away from my problems</span> 🏃‍♂️
 - I play the acoustic and bass guitar <span class="text-background" onclick="this.classList.remove('text-background')">not with feelings</span> 🎸
--
 
 ## Tech Stack
 
@@ -20,11 +19,9 @@ Hello! I'm a data scientist that does development work too!
 
 ## What I Write About
 
-- [The foodie side of me](/categories/food)
-- [Me being a coffee connoisseur](/categories/coffee)
+- [My relationship with food](/categories/food)
 - [Me trying to be fit](/categories/fitness)
 - [The computer geek in me](/categories/technology)
--
 
 ## Contact
 

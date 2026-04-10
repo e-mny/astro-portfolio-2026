@@ -11,7 +11,7 @@ tags:
   - Web Development
 links:
   github: https://github.com/e-mny/astro_portfolio_2025
-status: completed
+status: archived
 createdAt: 2025-02-06
 updatedAt: 2025-03-13
 image: "/projects/portfolio_website_v2.png"
