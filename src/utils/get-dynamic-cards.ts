@@ -19,6 +19,7 @@ async function fetchJson<T>(
 export async function getStravaCard(): Promise<HeroCard | null> {
   const token = await getValidAccessToken("strava");
   const id = import.meta.env["STRAVA_ATHLETE_ID"];
+  console.log("STRAVA: ", token, id);
   if (!token) return null;
 
   const data = await fetchJson<{
@@ -74,6 +75,7 @@ export async function getMonkeytypeCard(): Promise<HeroCard | null> {
 
 export async function getSpotifyCard(): Promise<HeroCard | null> {
   const token = await getValidAccessToken("spotify");
+  console.log("Spotify: ", token);
 
   if (!token) return null;
 
