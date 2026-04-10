@@ -1,7 +1,6 @@
 ---
 import site from "@/config/site";
 import Card from "./Card.astro";
-import DynamicCards from "./DynamicCard";
 import DynamicCard from "./DynamicCard.astro";
 
 const staticCards = site.hero.cards;
@@ -22,7 +21,6 @@ const staticCards = site.hero.cards;
         <Card card={card} index={i} />
       ))}
       <DynamicCard />
-      {/* <DynamicCards client:load /> */}
     </div>
   ) : null
 }
