@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import {
   getStravaCard,
   getMonkeytypeCard,
@@ -26,7 +25,8 @@ try {
   console.error("Failed to fetch dynamic cards", e);
 }
 
-// console.log(dynamicCards)
+console.log(dynamicCards);
+export const prerender = false;
 ---
 
 {
