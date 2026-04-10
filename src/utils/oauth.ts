@@ -7,10 +7,12 @@ async function refreshToken(
   provider: "spotify" | "strava",
   refreshToken: string,
 ): Promise<TokenData | null> {
-  const clientId = import.meta.env[`${provider.toUpperCase()}_CLIENT_ID`];
-  const clientSecret = import.meta.env[
-    `${provider.toUpperCase()}_CLIENT_SECRET`
-  ];
+  const clientId = import.meta.env.PROD
+    ? process.env[`${provider.toUpperCase()}_CLIENT_ID`]
+    : import.meta.env[`${provider.toUpperCase()}_CLIENT_ID`];
+  const clientSecret = import.meta.env.PROD
+    ? process.env[`${provider.toUpperCase()}_CLIENT_SECRET`]
+    : import.meta.env[`${provider.toUpperCase()}_CLIENT_SECRET`];
 
   const body = new URLSearchParams({
     grant_type: "refresh_token",
@@ -51,9 +53,9 @@ async function refreshToken(
 export async function getValidAccessToken(
   provider: "spotify" | "strava",
 ): Promise<string | null> {
-  const oldRefreshToken = import.meta.env[
-    `${provider.toUpperCase()}_REFRESH_TOKEN`
-  ];
+  const oldRefreshToken = import.meta.env.PROD
+    ? process.env[`${provider.toUpperCase()}_REFRESH_TOKEN`]
+    : import.meta.env[`${provider.toUpperCase()}_REFRESH_TOKEN`];
   if (!oldRefreshToken) return null;
 
   const cached = tokenCache[provider];

@@ -13,7 +13,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   // IMPORTANT: Change this to your deployed site URL
   site: "https://enochmok.vercel.app/",
-  output: "static",
+  output: "server",
 
   adapter: vercel({
     webAnalytics: {
