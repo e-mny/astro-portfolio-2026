@@ -20,7 +20,7 @@ const staticCards = site.hero.cards;
       {staticCards.map((card, i) => (
         <Card card={card} index={i} />
       ))}
-      <DynamicCard />
+      <DynamicCard client:load />
     </div>
   ) : null
 }
