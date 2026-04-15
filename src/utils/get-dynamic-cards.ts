@@ -40,7 +40,7 @@ export async function getStravaCard(): Promise<HeroCard | null> {
   return {
     icon: "mdi:run",
     label: "Running (Strava)",
-    value: `This month: ${distance_this_month} km | This year: ${distance_ytd} km`,
+    value: `MTD: ${distance_this_month} km | YTD: ${distance_ytd} km`,
   };
 }
 
