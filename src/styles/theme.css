@@ -20,7 +20,7 @@
 
 :root {
   /* Primary theme hue - change this single value to shift entire color palette */
-  --hue: 185;
+  --hue: 156;
 
   /* --- Light Mode: Sage Mist --- */
   --background: oklch(0.98 0.008 var(--hue));
