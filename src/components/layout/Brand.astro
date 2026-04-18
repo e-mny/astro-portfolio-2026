@@ -14,7 +14,7 @@ import Avatar from "../blocks/Avatar.astro";
         <Avatar src="/photos/hero_img.jpg" />
         <span
           id="status-dot"
-          class="absolute right-0 bottom-0 h-3 w-3 animate-pulse rounded-full bg-yellow-400"
+          class="absolute right-0 bottom-0 h-3 w-3 animate-pulse rounded-full bg-green-500"
         ></span>
       </div>
     </div>
@@ -37,12 +37,11 @@ import Avatar from "../blocks/Avatar.astro";
 
   function setAway() {
     dot.classList.remove("rainbow");
-    dot.classList.remove("bg-green-600");
-    dot.classList.add("bg-yellow-400");
+    dot.classList.add("bg-green-500");
   }
 
   function setActive() {
-    dot.classList.remove("bg-yellow-400");
+    dot.classList.remove("bg-green-500");
     dot.classList.add("rainbow");
 
     clearTimeout(timeout);
