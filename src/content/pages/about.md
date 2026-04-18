@@ -8,11 +8,11 @@ description: About this site and its author
 Hello! I'm a data scientist that does development work too!
 
 - I like to run <span class="text-background" onclick="this.classList.remove('text-background')">away from my problems</span> 🏃‍♂️
-- I play the acoustic and bass guitar <span class="text-background" onclick="this.classList.remove('text-background')">not with feelings</span> 🎸
+- I play the acoustic and bass guitar <span class="text-background" onclick="this.classList.remove('text-background')">, not with feelings</span> 🎸
 
 ## Tech Stack
 
-- [Astro](https://astro.build) - Inspired from [**Breeze**](https://github.com/linftyz/astro-theme-breeze).
+- [Astro](https://astro.build) - Inspired from [**Breeze theme**](https://github.com/linftyz/astro-theme-breeze).
 - [Tailwind CSS](https://tailwindcss.com)
 - TypeScript
 - Markdown / MDX
