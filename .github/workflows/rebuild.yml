@@ -3,7 +3,6 @@ name: Rebuild Astro Site
 on:
   schedule:
     - cron: "0 0 1,15 * *" # run on 1st and 15th of each month
-  workflow_dispatch: # optional manual trigger
 
 jobs:
   build:
