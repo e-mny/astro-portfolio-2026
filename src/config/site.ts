@@ -44,7 +44,7 @@ const site = {
       "I turn caffeine into predictive models, data insights, and web apps.",
     cards: [
       { icon: "mdi:explore", label: "Status", value: "Probably researching" },
-      { icon: "mdi:location", label: "Location", value: "Singapore" },
+      { icon: "mdi:location", label: "Location", value: "Singapore 🇸🇬" },
     ],
   },
 

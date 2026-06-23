@@ -9,7 +9,7 @@ tags:
   - Data Science
   - Python
 links:
-  publication: https://www.igi-global.com/book/driven-innovations-digital-healthcare/335094
+  publication: "/projects/Federated_Learning_for_Breast_Cancer_Classification_Submission.pdf"
   github: https://github.com/e-mny/mammogram_classification
 status: completed
 createdAt: 2023-01-15

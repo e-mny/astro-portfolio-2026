@@ -47,10 +47,10 @@ const projects = defineCollection({
     tags: z.array(reference("tags")).optional().default([]),
     links: z
       .object({
-        website: z.url().optional(),
-        github: z.url().optional(),
-        demo: z.url().optional(),
-        publication: z.url().optional(),
+        website: z.string().optional(),
+        github: z.string().optional(),
+        demo: z.string().optional(),
+        publication: z.string().optional(),
       })
       .optional(),
     status: z
