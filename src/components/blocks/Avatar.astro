@@ -2,4 +2,10 @@
 const { src, alt = "avatar", size = 48 } = Astro.props;
 ---
 
-<img src={src} alt={alt} class="avatar rounded-full object-cover" />
+<img
+  src={src}
+  alt={alt}
+  width={size}
+  height={size}
+  class="avatar aspect-square rounded-full object-cover"
+/>
